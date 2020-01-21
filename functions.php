@@ -80,11 +80,12 @@ add_action( 'after_setup_theme', 'tn_theme_setup' );
 /**
  * Register and Enqueue Styles.
  */
-function tn_register_styles() {
-	// Theme stylesheet.
-	//wp_enqueue_style( 'tn-style', get_stylesheet_uri(), array(), '20200507' );
-	$theme_version = wp_get_theme()->get( 'Version' );
-	wp_enqueue_style( 'tn-style', get_stylesheet_uri(), array(), $theme_version );
-}
 
-add_action( 'wp_enqueue_scripts', 'tn_register_styles' );
+function tn_register_styles(){
+		// Load our main stylesheet.
+		wp_enqueue_style( 'tn-style', get_stylesheet_uri() );
+//		wp_enqueue_style('drawer.min', get_template_directory_uri() .'/css/drawer.min.css');
+//		wp_enqueue_style('bootstrap.min', get_template_directory_uri() .'/css/bootstrap.min.css');
+//		wp_enqueue_style('font-awesome.min', get_template_directory_uri() .'/css/font-awesome.min.css');
+	}
+	add_action('wp_enqueue_scripts','tn_register_styles');

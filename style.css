@@ -72,3 +72,60 @@ body{
   margin:0 auto;
 }
 /** Header CSS **/
+.h-d{
+	padding:20px 0px;
+	width:100%;
+	display: inline-block;
+}
+.d-h{
+	display: inline-flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.d-menu{
+	display:inline-flex;
+	width:100%;
+}
+.d-menu li:last-child{
+	padding-right:0px;
+}
+.d-lg a{
+	line-height: 0px;
+	display: block;
+}
+.d-menu ul{
+	margin:0px;
+	padding:0px;
+}
+.d-menu li{
+	padding: 0px 10px;
+	position: relative;
+	list-style: none;
+}
+.d-menu li a{
+	padding:10px 0px;
+	display: block;
+}
+.d-menu li ul {
+    background: #ccc none repeat scroll 0 0;
+    left: 0;
+    min-width: 200px;
+    opacity: 0;
+    position: absolute;
+    top: 100%;
+    transform: translateY(15px);
+    transition: all 0.3s ease-in-out 0s;
+    visibility: hidden;
+    padding:10px;
+}
+.d-menu li:hover>ul {
+    opacity: 1;
+    transform: translateY(0px);
+    visibility: visible;
+    transition: all 0.2s ease-in-out 0s;
+}
+.d-menu li ul li ul {
+    left: 100%;
+    top: 0;
+}
