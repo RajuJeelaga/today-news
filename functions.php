@@ -86,6 +86,7 @@ function tn_register_styles(){
 		wp_enqueue_style( 'tn-style', get_stylesheet_uri() );
 //		wp_enqueue_style('drawer.min', get_template_directory_uri() .'/css/drawer.min.css');
 //		wp_enqueue_style('bootstrap.min', get_template_directory_uri() .'/css/bootstrap.min.css');
-//		wp_enqueue_style('font-awesome.min', get_template_directory_uri() .'/css/font-awesome.min.css');
+		wp_enqueue_style('font-awesome.min', get_template_directory_uri() .'/css/all.css');
+		//https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css
 	}
 	add_action('wp_enqueue_scripts','tn_register_styles');
